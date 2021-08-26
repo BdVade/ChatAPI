@@ -1,0 +1,45 @@
+Folder PATH listing
+Volume serial number is 02E4-1E34
+C:.
+³   manage.py
+³   tree.txt
+³   
+ÃÄÄÄ.idea
+³   ³   .gitignore
+³   ³   ChatAPI.iml
+³   ³   misc.xml
+³   ³   modules.xml
+³   ³   workspace.xml
+³   ³   
+³   ÀÄÄÄinspectionProfiles
+³           profiles_settings.xml
+³           Project_Default.xml
+³           
+ÃÄÄÄChatAPI
+³       asgi.py
+³       settings.py
+³       urls.py
+³       wsgi.py
+³       __init__.py
+³       
+ÀÄÄÄtemplates
+server {
+    if ($host = exitumbridge.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        return 301 https://$host$request_uri;
+
+        server_name 167.172.157.100 exitumbridge.com www.exitumbridge.com;
+    return 404; # managed by Certbot
+
+
+}
+
+Name
+Department
+Stack
+What do you hope to learn
