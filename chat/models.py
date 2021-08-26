@@ -6,16 +6,16 @@ from django.conf import settings
 
 class Conversation(models.Model):
     initiator = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, related_name="convo_starter"
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, related_name="convo_starter"
     )
     receiver = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, related_name="convo_participant"
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, related_name="convo_participant"
     )
     start_time = models.DateTimeField(auto_now_add=True)
 
 
 class Message(models.Model):
-    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING,
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL,
                                related_name='message_sender')
     text = models.CharField(max_length=200)
     attachment = models.FileField(blank=True)
